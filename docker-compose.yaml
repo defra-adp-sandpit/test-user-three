@@ -1,0 +1,13 @@
+services:
+  ? test-user-3
+  : build:
+      context: .
+      target: production
+    image: test-user-3
+    container_name: test-user-3
+    depends_on:
+      - test-user-3-postgres
+    environment:
+      APPINSIGHTS_CLOUDROLE: test-user-3-local
+      APPINSIGHTS_CONNECTIONSTRING: ${APPINSIGHTS_CONNECTIONSTRING}
+

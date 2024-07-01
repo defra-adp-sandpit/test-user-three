@@ -1,0 +1,36 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-user-3
+  description: demo for test user 3
+  annotations:
+    github.com/project-slug: defra-adp-sandpit/test-user-three
+    dev.azure.com/project: defra-adp
+    dev.azure.com/build-definition: test-user-3
+    sonarqube.org/project-key: test-user-3
+    grafana/dashboard-selector: "folderTitle == 'Managed Prometheus'"
+    backstage.io/kubernetes-id: test-user-3
+  links:
+    - url: https://github.com/defra-adp-sandpit/test-user-three
+      title: GitHub Repository
+      icon: github
+    - url: https://dev.azure.com/defragovuk/defra-adp
+      title: Azure DevOps Project
+      icon: project
+    - url: https://sonarcloud.io/project/overview?id=test-user-3
+      title: SonarCloud Analysis
+      icon: check
+    - url: https://snyk.io/test/github/DEFRA/test-user-3
+      title: Snyk Analysis
+      icon: policy
+    - url: https://portal.azure.com/defradev.onmicrosoft.com
+      title: Azure Portal - Defra Dev
+      icon: cloud
+    - url: https://portal.azure.com/Defra.onmicrosoft.com
+      title: Azure Portal - Defra
+      icon: cloud
+spec:
+  type: backend
+  lifecycle: alpha
+  owner: group:default/eutd-adp-test
+  system: system:default/adp-shared-services
